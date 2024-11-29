@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionbanco.HelloController">
+   <children>
+      <TabPane prefHeight="424.0" prefWidth="665.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Banreservas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="606.0" prefWidth="827.0">
+                     <children>
+                        <TextField fx:id="tfNombre" layoutX="14.0" layoutY="27.0" prefHeight="25.0" prefWidth="300.0" promptText="Nombre" />
+                        <TextField fx:id="tfApellido" layoutX="14.0" layoutY="66.0" prefHeight="25.0" prefWidth="300.0" promptText="Apellido" />
+                        <TextField fx:id="tfId" layoutX="14.0" layoutY="106.0" prefHeight="25.0" prefWidth="300.0" promptText="ID" />
+                        <TableView fx:id="table" layoutY="284.0" prefHeight="242.0" prefWidth="842.0">
+                          <columns>
+                            <TableColumn fx:id="tbNombre" prefWidth="87.0" text="Nombre" />
+                            <TableColumn fx:id="tbApellido" prefWidth="87.0" text="Apellido" />
+                              <TableColumn fx:id="tbID" prefWidth="98.0" text="ID" />
+                              <TableColumn fx:id="tbDepartamento" prefWidth="113.0" text="Departamento" />
+                              <TableColumn fx:id="tbArea" prefWidth="115.0" text="Area" />
+                              <TableColumn fx:id="tbSueldoBruto" prefWidth="123.0" text="Sueldo bruto" />
+                              <TableColumn fx:id="tbSueldoneto" prefWidth="133.0" text="Sueldo neto" />
+                              <TableColumn fx:id="tbGenero" prefWidth="85.0" text="Genero" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="tfGenero" layoutX="14.0" layoutY="226.0" prefHeight="25.0" prefWidth="300.0" promptText="Genero" />
+                        <TextField fx:id="tfSueldobruto" layoutX="14.0" layoutY="186.0" prefHeight="25.0" prefWidth="300.0" promptText="Sueldo bruto" />
+                        <TextField fx:id="tfDepartamento" layoutX="14.0" layoutY="145.0" prefHeight="25.0" prefWidth="140.0" promptText="Departamento" />
+                        <Button fx:id="btInsertar" layoutX="363.0" layoutY="226.0" mnemonicParsing="false" onAction="#OnInsertar" text="Insertar" />
+                        <TextField fx:id="tfArea" layoutX="162.0" layoutY="145.0" prefHeight="25.0" prefWidth="152.0" promptText="Area" />
+                        <Button fx:id="btLimpiar" layoutX="457.0" layoutY="226.0" mnemonicParsing="false" onAction="#OnLimpiar" text="Limpiar" />
+                        <Button fx:id="guardarEmpleado" layoutX="540.0" layoutY="226.0" mnemonicParsing="false" onAction="#guardarEmpleados" text="Guardar Empleados" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="BHD">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="404.0" prefWidth="654.0">
+                     <children>
+                        <TextField fx:id="tfCuentaEmpleadoBHD" layoutX="14.0" layoutY="27.0" prefHeight="25.0" prefWidth="300.0" promptText="Cuenta del empleado" />
+                        <TextField fx:id="tfNombredelempleadoBHD" layoutX="14.0" layoutY="66.0" prefHeight="25.0" prefWidth="300.0" promptText="Nombre del empleado" />
+                        <TextField fx:id="tfReferenciaBHD" layoutX="14.0" layoutY="106.0" prefHeight="25.0" prefWidth="301.0" promptText="Referencia" />
+                        <TableView fx:id="table1" layoutY="284.0" prefHeight="242.0" prefWidth="842.0">
+                           <columns>
+                              <TableColumn fx:id="tbCuentaEmpleadoBHD" prefWidth="140.0" text="Cuenta del empleado" />
+                              <TableColumn fx:id="tbNombreEmpleadoBHD" prefWidth="205.0" text="Nombre del empleado" />
+                              <TableColumn fx:id="tbReferenciaBHD" prefWidth="103.0" text="Referencia" />
+                              <TableColumn fx:id="tbConceptoBHD" prefWidth="177.0" text="Concepto" />
+                              <TableColumn fx:id="tbMontodelpagoBHD" prefWidth="157.0" text="Monto del pago" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="tfConceptoBHD" layoutX="14.0" layoutY="186.0" prefHeight="25.0" prefWidth="301.0" promptText="Concepto" />
+                        <Button fx:id="btInsertarBHD" layoutX="14.0" layoutY="226.0" mnemonicParsing="false" onAction="#OnInsertarBHD" text="Insertar" />
+                        <Button fx:id="btLimpiarBHD" layoutX="259.0" layoutY="226.0" mnemonicParsing="false" onAction="#OnLimpiarBHD" text="Limpiar" />
+                        <TextField fx:id="tfMontoDelPagoBHD" layoutX="13.0" layoutY="143.0" prefHeight="25.0" prefWidth="302.0" promptText="Monto del pago" />
+                        <Button fx:id="guardarEmpleadoBHD" layoutX="91.0" layoutY="226.0" mnemonicParsing="false" onAction="#guardarEmpleadosBHD" text="Guardar Empleados BHD" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Popular">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="606.0" prefWidth="827.0">
+                     <children>
+                        <TextField fx:id="tfMontoTransaccionPOPULAR" layoutX="14.0" layoutY="27.0" prefHeight="25.0" prefWidth="300.0" promptText="Monto Transaccion" />
+                        <TextField fx:id="tfTipoIdentificacionPOPULAR" layoutX="14.0" layoutY="66.0" prefHeight="25.0" prefWidth="300.0" promptText="Tipo de Identificacion" />
+                        <TextField fx:id="tfIdentificacionPOPULAR" layoutX="16.0" layoutY="226.0" prefHeight="25.0" prefWidth="299.0" promptText="Identificacion" />
+                        <TableView fx:id="table11" layoutY="284.0" prefHeight="242.0" prefWidth="842.0">
+                           <columns>
+                              <TableColumn fx:id="tbMontoTransaccionPOPULAR" prefWidth="135.0" text="Monto Transaccion" />
+                              <TableColumn fx:id="tbTipoDeidentificacionPOPULAR" prefWidth="135.0" text="Tipo de identificacion" />
+                              <TableColumn fx:id="tbNombrePOPULAR" prefWidth="135.0" text="Nombre" />
+                              <TableColumn fx:id="tbNumerodereferenciaPOPULAR" prefWidth="152.0" text="Numero de referencia" />
+                              <TableColumn fx:id="tbDescripcionPOPULAR" prefWidth="142.0" text="Descripcion" />
+                              <TableColumn fx:id="tbIdentificacionPOPULAR" prefWidth="134.0" text="Identificacion" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="tfNumeroDeReferenciaPOPULAR" layoutX="16.0" layoutY="144.0" prefHeight="25.0" prefWidth="299.0" promptText="Numero de referencia" />
+                        <Button fx:id="btInsertarPOPULAR" layoutX="363.0" layoutY="226.0" mnemonicParsing="false" onAction="#OnInsertarPOPULAR" text="Insertar" />
+                        <TextField fx:id="tfDescripcionPOPULAR" layoutX="16.0" layoutY="186.0" prefHeight="25.0" prefWidth="299.0" promptText="Descripcion" />
+                        <Button fx:id="btLimpiarPOPULAR" layoutX="457.0" layoutY="226.0" mnemonicParsing="false" onAction="#OnLimpiarPOPULAR" text="Limpiar" />
+                        <TextField fx:id="tfNombrePOPULAR" layoutX="14.0" layoutY="107.0" prefHeight="25.0" prefWidth="302.0" promptText="Nombre" />
+                        <Button fx:id="guardarEmpleadoPopular" layoutX="547.0" layoutY="226.0" mnemonicParsing="false" onAction="#guardarEmpleadosPopular" text="Guardar Empleados Popular" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</StackPane>
